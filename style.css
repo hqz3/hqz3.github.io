@@ -1,0 +1,96 @@
+@import "https://fonts.googleapis.com/css?family=VT323";
+
+:root {
+  --background: #202823;
+  --green: #33ff33;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 2rem;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  display: inline;
+}
+
+a:hover {
+  filter: brightness(90%);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--green);
+  font-family: "VT323", monospace;
+  font-size: 2rem;
+  margin: auto;
+  max-width: 1440px;
+  text-shadow: 0 0 0px rgba(255, 255, 255, 0), 0 0 1px rgba(0, 255, 0, 0.1),
+    0 0 2px rgba(0, 255, 0, 0.1), 3px 0 6px rgba(0, 255, 0, 0.3),
+    -3px 0 6px rgba(0, 255, 0, 0.1), 5px 0 8px rgba(0, 255, 0, 0.1),
+    -5px 0 8px rgba(0, 255, 0, 0.1);
+}
+
+header {
+  align-items: baseline;
+  border-bottom: 1px solid var(--green);
+  display: flex;
+  justify-content: end;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.clients {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.project {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  margin-bottom: 2rem;
+}
+
+.container {
+  border: 1px solid var(--green);
+
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.image {
+  max-height: 15rem;
+  overflow: hidden;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+}
+
+img:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: 0.25s;
+}
