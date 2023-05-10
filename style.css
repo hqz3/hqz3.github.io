@@ -23,7 +23,6 @@ html {
 a {
   color: var(--green);
   text-decoration: none;
-  display: inline;
 }
 
 a:hover {
@@ -37,34 +36,38 @@ body {
   font-size: 2rem;
   margin: auto;
   max-width: 1440px;
-  text-shadow: 0 0 0px rgba(255, 255, 255, 0), 0 0 1px rgba(0, 255, 0, 0.1),
-    0 0 2px rgba(0, 255, 0, 0.1), 3px 0 6px rgba(0, 255, 0, 0.3),
-    -3px 0 6px rgba(0, 255, 0, 0.1), 5px 0 8px rgba(0, 255, 0, 0.1),
-    -5px 0 8px rgba(0, 255, 0, 0.1);
 }
 
 header {
-  align-items: baseline;
   border-bottom: 1px solid var(--green);
+
   display: flex;
-  justify-content: end;
+  align-items: baseline;
+  justify-content: start;
+
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  padding-top: 1rem;
 }
 
-.clients {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fill, 25rem);
-  margin-bottom: 2rem;
-  width: 100%;
+h1::after {
+  content: "█";
+  color: var(--green);
+  margin-left: 1rem;
+  animation: cursorBlink 1.5s steps(2) infinite;
 }
 
+@keyframes cursorBlink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.clients,
 .project {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, 25rem);
+  grid-template-columns: repeat(auto-fill, 27.5rem);
+
   margin-bottom: 2rem;
 }
 
@@ -72,15 +75,13 @@ header {
   border: 1px solid var(--green);
 
   display: flex;
-  align-items: start;
   flex-direction: column;
 
-  gap: 0.75rem;
   width: 100%;
 }
 
 .image {
-  max-height: 15rem;
+  height: 15rem;
   overflow: hidden;
 }
 
@@ -93,4 +94,24 @@ img:hover {
   cursor: pointer;
   scale: 1.1;
   transition: 0.25s;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  margin-top: auto;
+  padding: 1rem;
+  row-gap: 1rem;
+}
+
+.badges {
+  display: flex;
+  gap: 1rem;
+}
+
+.devicon-github-original,
+.devicon-django-plain-wordmark,
+.devicon-wordpress-plain-wordmark {
+  color: white;
 }
