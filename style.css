@@ -66,8 +66,7 @@ h1::after {
 .project {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, 27.5rem);
-
+  grid-template-columns: repeat(auto-fill, 27rem);
   margin-bottom: 2rem;
 }
 
